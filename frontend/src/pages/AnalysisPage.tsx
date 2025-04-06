@@ -209,11 +209,11 @@ const AnalysisPage: React.FC = () => {
     birthday: celebrityData.birthday,
     age: celebrityData.age,
     occupation: celebrityData.occupation,
-    imageUrl: '/placeholder.jpg', // Placeholder for now
+    imageUrl: '', // Empty string - the ProfileInfo component will handle this
     bio: celebrityData.bio,
     affiliations: celebrityData.alsoViewed.map(name => ({ 
       name, 
-      imageUrl: '/placeholder.jpg' 
+      imageUrl: '/images/default/profile-placeholder.svg' 
     })),
   };
 

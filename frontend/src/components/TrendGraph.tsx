@@ -251,7 +251,10 @@ const TrendGraph: React.FC<TrendGraphProps> = ({
             // Only show tooltip if there's a title
             if (d.title) {
               // Find and highlight the corresponding visible point
-              d3.select(`.sentiment-point-${d.x}`).attr('r', 7).attr('opacity', 1);
+              d3.select(`.sentiment-point-${d.x}`)
+                .attr('r', 8)
+                .attr('stroke-width', 2)
+                .attr('opacity', 1);
               
               const [x, y] = d3.pointer(event);
               setTooltipData({
@@ -263,7 +266,10 @@ const TrendGraph: React.FC<TrendGraphProps> = ({
           })
           .on('mouseout', function(event, d: any) {
             // Reset the corresponding visible point
-            d3.select(`.sentiment-point-${d.x}`).attr('r', 5).attr('opacity', 0.8);
+            d3.select(`.sentiment-point-${d.x}`)
+              .attr('r', 5)
+              .attr('stroke-width', 1.5)
+              .attr('opacity', 0.8);
             setTooltipData(null);
           })
           .on('click', (event, d: any) => {
@@ -299,9 +305,9 @@ const TrendGraph: React.FC<TrendGraphProps> = ({
     const getTooltipContent = (label: string) => {
       switch (label) {
         case 'Public Sentiment':
-          return 'Public sentiment score calculated from social media analysis (40%), news sentiment (30%), public comments (20%), and engagement metrics (10%). Range: -10 to +10.';
+          return 'Public sentiment score calculated from sentiment analysis of news articles on a scale of -10 to 10 based off positivity/negativity.';
         case 'Popularity Score':
-          return 'Popularity score based on social media following, media mentions, search trends, and public engagement rates. Range: 0 to 100.';
+          return 'Popularity score based on google trend interest over time. Range: 0 to 100.';
         default:
           return '';
       }

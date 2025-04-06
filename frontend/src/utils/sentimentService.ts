@@ -377,6 +377,106 @@ export const getExtremeSentimentTitles = async (name: string, count: number = 3)
   }));
 };
 
+// Function to get the highest and lowest sentiment articles for a celebrity
+export const getHighestLowestSentimentTitles = async (name: string): Promise<ExtremeSentimentItem[]> => {
+  // Initialize cache if needed
+  if (!sentimentCache) {
+    await initializeSentimentCache();
+  }
+  
+  // If we still don't have a cache (initialization failed), return empty array
+  if (!sentimentCache) {
+    console.error('Sentiment data cache is not available');
+    return [];
+  }
+  
+  console.log(`Fetching highest/lowest sentiment titles for ${name} from local cache`);
+  
+  // Try to find the best matching name in the cache
+  const bestMatch = findBestMatch(name);
+  
+  if (!bestMatch) {
+    console.log(`No sentiment data found for ${name}`);
+    return [];
+  }
+  
+  const sentimentData = sentimentCache.get(bestMatch) || [];
+  
+  if (sentimentData.length === 0) {
+    console.log(`No sentiment data points available for ${bestMatch}`);
+    return [];
+  }
+  
+  // Filter only data points with a title and extreme score
+  const validData = sentimentData.filter(point => 
+    point.title && 
+    point.extremeScore !== undefined && 
+    !isNaN(point.extremeScore)
+  );
+  
+  if (validData.length === 0) {
+    console.log(`No valid sentiment data found for ${bestMatch}`);
+    return [];
+  }
+  
+  // Create copies of the data for sorting differently
+  const forHighest = [...validData];
+  const forLowest = [...validData];
+  const forRecent = [...validData];
+  
+  // Sort by Y value (sentiment score on graph) descending to find highest point
+  forHighest.sort((a, b) => b.y - a.y);
+  
+  // Sort by Y value (sentiment score on graph) ascending to find lowest point
+  forLowest.sort((a, b) => a.y - b.y);
+  
+  // Sort by year (descending) to find most recent
+  forRecent.sort((a, b) => b.x - a.x);
+  
+  // Get the highest, lowest, and most recent articles
+  const highestSentiment = forHighest[0];
+  const lowestSentiment = forLowest[0];
+  const mostRecent = forRecent[0];
+  
+  // Create result array, avoiding duplicates
+  const result: ExtremeSentimentItem[] = [];
+  
+  // Define a helper function to check if two data points are identical
+  const isSameDataPoint = (a: SentimentDataPoint, b: SentimentDataPoint) => {
+    return a.x === b.x && a.y === b.y && a.title === b.title;
+  };
+  
+  // Add highest sentiment article
+  result.push({
+    year: highestSentiment.x,
+    title: highestSentiment.title!,
+    score: highestSentiment.extremeScore!, // Keep using extremeScore for display
+    link: highestSentiment.link
+  });
+  
+  // Add lowest sentiment article if different from highest
+  if (!isSameDataPoint(lowestSentiment, highestSentiment)) {
+    result.push({
+      year: lowestSentiment.x,
+      title: lowestSentiment.title!,
+      score: lowestSentiment.extremeScore!, // Keep using extremeScore for display
+      link: lowestSentiment.link
+    });
+  }
+  
+  // Add most recent article if different from both highest and lowest
+  if (!isSameDataPoint(mostRecent, highestSentiment) && !isSameDataPoint(mostRecent, lowestSentiment)) {
+    result.push({
+      year: mostRecent.x,
+      title: mostRecent.title!,
+      score: mostRecent.extremeScore!, // Keep using extremeScore for display
+      link: mostRecent.link
+    });
+  }
+  
+  return result;
+};
+
 /**
  * Calculate a public sentiment grade for a celebrity based on their sentiment data
  * 
@@ -501,6 +601,10 @@ export const calculatePublicSentimentGrade = async (name: string): Promise<Senti
     (extremenessScore * extremenessWeight)
   );
   
+  // Add a constant factor to everyone's score
+  const GLOBAL_SCORE_ADJUSTMENT = 10; // Constant adjustment applied to all celebrities
+  finalScore += GLOBAL_SCORE_ADJUSTMENT;
+  
   // Ensure score is within 0-100 range
   finalScore = Math.max(0, Math.min(100, finalScore));
   
@@ -521,30 +625,9 @@ export const calculatePublicSentimentGrade = async (name: string): Promise<Senti
   else letterGrade = 'F';
   
   // Generate description based on components
-  let description = `Public sentiment grade based on ${sortedData.length} years of data.`;
+  let description = `Grade based on ${sortedData.length} years of data. Factors: recent sentiment (40%), overall average (25%), trend (15%), volatility (10%), extremeness (10%), +10 adjustment.`;
   
-  // Add sentiment trend description
-  if (trendFactor > 0.05) {
-    description += ' Public perception has been significantly improving over time.';
-  } else if (trendFactor > 0.01) {
-    description += ' Public perception has been gradually improving over time.';
-  } else if (trendFactor < -0.05) {
-    description += ' Public perception has been declining significantly over time.';
-  } else if (trendFactor < -0.01) {
-    description += ' Public perception has been gradually declining over time.';
-  } else {
-    description += ' Public perception has remained relatively stable over time.';
-  }
-  
-  // Add volatility description
-  if (volatility > 0.6) {
-    description += ' Public opinion is highly volatile with dramatic shifts.';
-  } else if (volatility > 0.3) {
-    description += ' Public opinion shows moderate volatility.';
-  } else {
-    description += ' Public opinion shows consistent stability.';
-  }
-  
+  // Remove all trend and volatility commentary - the description will be the same for all letter grades
   return {
     letter: letterGrade,
     score: Math.round(finalScore),

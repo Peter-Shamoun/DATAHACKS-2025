@@ -2,6 +2,25 @@ import React, { useEffect, useState } from 'react';
 import { Box, Typography, Avatar, Tooltip, CircularProgress } from '@mui/material';
 import { SentimentGrade, calculatePublicSentimentGrade } from '../utils/sentimentService';
 
+// New function to get celebrity image based on name
+const getCelebrityImage = (name: string): string => {
+  // Convert name to lowercase for case-insensitive comparison
+  const lowerName = name.toLowerCase();
+  
+  if (lowerName.includes('kanye') || lowerName.includes('ye')) {
+    return `${process.env.PUBLIC_URL}/images/kanye.png`;
+  } else if (lowerName.includes('kamala')) {
+    return `${process.env.PUBLIC_URL}/images/kamala.png`;
+  } else if (lowerName.includes('will smith')) {
+    return `${process.env.PUBLIC_URL}/images/willsmith.png`;
+  } else if (lowerName.includes('donald') && lowerName.includes('trump')) {
+    return `${process.env.PUBLIC_URL}/images/trump.png`;
+  }
+  
+  // Default placeholder image
+  return `${process.env.PUBLIC_URL}/images/default/profile-placeholder.svg`;
+};
+
 interface ProfileInfoProps {
   name: string;
   birthday: string;
@@ -91,16 +110,25 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({
   
   // Format occupation by replacing underscores with spaces
   const formattedOccupation = occupation.replace(/_/g, ' ');
+  
+  // Get the correct celebrity image based on name
+  const displayImageUrl = getCelebrityImage(name);
 
   return (
     <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 4, mb: 4 }}>
       <Avatar
-        src={imageUrl}
+        src={displayImageUrl}
         alt={name}
         sx={{
           width: 150,
           height: 150,
           bgcolor: 'grey.300',
+          objectFit: 'cover',
+          '& img': {
+            objectFit: 'cover',
+            width: '100%',
+            height: '100%'
+          }
         }}
       />
       <Box>
