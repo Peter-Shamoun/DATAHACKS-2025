@@ -1,51 +1,51 @@
-,Name,Birthday,Age,Occupation
-0,Leonardo DiCaprio,"November 11, 1974",50,actor
-1,Michelle Obama,"January 17, 1964",61,lawyer
-2,Jim Carrey,"January 17, 1962",63,comedian
-3,Kim Kardashian,"October 21, 1980",44,entrepreneur
-4,Tom Cruise,"July 03, 1962",62,actor
-5,Will Smith,"September 25, 1968",56,actor
-6,Taylor Swift,"December 13, 1989",35,singer-songwriter
-7,Barack Obama,"August 04, 1961",63,politician
-8,Ivanka Trump,"October 30, 1981",43,businessperson
-9,Danny DeVito,"November 17, 1944",80,film_producer
-10,Arnold Schwarzenegger,"July 30, 1947",77,actor
-11,Donald Trump,"June 14, 1946",78,entrepreneur
-12,Britney Spears,"December 02, 1981",43,actor
-13,Kamala Harris,"October 20, 1964",60,politician
-14,Elon Musk,"June 28, 1971",53,aerospace_engineer
-15,Julia Roberts,"October 28, 1967",57,film_producer
-16,Morgan Freeman,"June 01, 1937",87,actor
-17,Hillary Clinton,"October 26, 1947",77,lawyer
-18,Lady Gaga,"March 28, 1986",39,record_producer
-19,Justin Bieber,"March 01, 1994",31,musician
-20,Johnny Depp,"June 09, 1963",61,actor
-21,Sylvester Stallone,"July 06, 1946",78,screenwriter
-22,Sandra Bullock,"July 26, 1964",60,film_producer
-23,Kanye West,"June 08, 1977",47,record_producer
-24,Samuel L. Jackson,"December 21, 1948",76,Actor
-25,Shaquille O'Neal,"March 06, 1972",53,basketball_player
-26,Queen Elizabeth II,"April 21, 1926",96,Monarch
-27,Mariah Carey,"March 27, 1970",55,record_producer
-28,Robert Downey Jr.,"April 04, 1965",59,actor
-29,Justin Timberlake,"January 31, 1981",44,actor
-30,Chuck Norris,"March 10, 1940",85,actor
-31,Jackie Chan,"April 07, 1954",70,actor
-32,Joe Biden,"November 20, 1942",82,lawyer
-33,Jennifer Lopez,"July 24, 1969",55,singer
-34,Angelina Jolie,"June 04, 1975",49,actor
-35,Dwayne Johnson,"May 02, 1972",52,wrestler
-36,Tom Hanks,"July 09, 1956",68,film_producer
-37,Betty White,"January 17, 1922",103,comedian
-38,Nicolas Cage,"January 07, 1964",61,actor
-39,Miley Cyrus,"November 23, 1992",32,actor
-40,Brad Pitt,"December 18, 1963",61,actor
-41,Beyoncé,"September 04, 1981",43,singer
-42,Mark Zuckerberg,"May 14, 1984",40,programmer
-43,John Travolta,"February 18, 1954",71,actor
-44,Bill Cosby,"July 12, 1937",87,actor
-45,Oprah Winfrey,"January 29, 1954",71,media_proprietor
-46,Robert De Niro,"August 17, 1943",81,actor
-47,Clint Eastwood,"May 31, 1930",94,actor
-48,Mark Wahlberg,"June 05, 1971",53,film_producer
-49,Celine Dion,"March 30, 1968",57,singer
+,Name,Birthday,Age,Occupation,Bio,Also Viewed
+0,Leonardo DiCaprio,"November 11, 1974",50,actor,"Actor who first rose to prominence for his roles in the 1990's films What's Eating Gilbert Grape, Romeo + Juliet and Titanic. He then went on to star in Catch Me If You Can, Blood Diamond, The Departed and Inception. He won an Academy Award for Best Actor for his role as Hugh Glass in the 2015 film The Revenant.","['Kate Winslet', 'Bar Refaeli', 'Kirk Cameron']"
+1,Michelle Obama,"January 17, 1964",61,lawyer,"Former First Lady of the United States of America who married Barack Obama, the 44th President of the United States of America, in 1992. She took a leading role in the ""Let's Move!"" initiative, which attempts to fight against childhood obesity, and has been a strong advocate for the rights of veterans and the LGBT community.","['Barack Obama', 'Nancy Reagan']"
+2,Jim Carrey,"January 17, 1962",63,comedian,"Comedian and actor who starred in such popular 1990s comedies as Dumb and Dumber, The Mask, The Cable Guy, Liar Liar and Ace Ventura: Pet Detective. He also proved his range with his Golden Globe winning roles in The Truman Show and Man on the Moon and for portraying Joel Barish in the inventive 2004 film Eternal Sunshine of the Spotless Mind.","['Jeff Daniels', 'Steve Carell', 'Robin Williams']"
+3,Kim Kardashian,"October 21, 1980",44,entrepreneur,"Rose to fame on Keeping Up with the Kardashians alongside her sisters Khloe, Kourtney, Kylie and Kendall, her brother Rob, her mother Kris and her mother's second spouse, Caitlyn. She has had tremendous success as an entrepreneur, launching clothing lines and smartphone apps. In 2015, she was named one of Time magazine's 100 most influential people. After after Keeping Up with the Kardashians ended in 2021, she starred on Hulu's The Kardashians.","['Kylie Jenner', 'Kanye West', 'North West']"
+4,Tom Cruise,"July 03, 1962",62,actor,"Actor who won Golden Globe Awards for his roles in Born on the Fourth of July, Jerry Maguire, and Magnolia. He had his breakthrough role in the 1983 film Risky Business and in 1996, he began playing Ethan Hunt in the popular Mission: Impossible film series.","['Nicole Kidman', 'Katie Holmes', 'Penelope Cruz']"
+5,Will Smith,"September 25, 1968",56,actor,"Actor and rapper who had his breakthrough acting role on the popular sitcom The Fresh Prince of Bel-Air. In 2007, he was named the most powerful actor in Hollywood by Newsweek. His long list of film credits includes Men in Black, Independence Day, Hitch and Bad Boys. He was also cast as the Genie in the Disney live-action remake of Aladdin.","['Jada Pinkett Smith', 'Martin Lawrence', 'Chris Rock']"
+6,Taylor Swift,"December 13, 1989",35,singer-songwriter,"Singer and songwriter who at the age of 16 became the youngest solo artist to write and record a #1 hit on the U.S. Hot Country Songs chart with the single ""Our Song."" She released her fourth country album, Red, in 2012. Her first pop album, 1989, came out in 2014. In 2017, her sixth album, Reputation, sold over a million copies in four days. She has since released multiple albums including re-recordings of her earlier albums.","['Selena Gomez', 'Ed Sheeran', 'Harry Styles']"
+7,Barack Obama,"August 04, 1961",63,politician,44th President of the United States who became the first African-American to hold the office. He became known for his economic stimulus legislation and healthcare reform.,"['Michelle Obama', 'Malia Obama', 'Sasha Obama']"
+8,Ivanka Trump,"October 30, 1981",43,businessperson,"Heiress and socialite who is primarily known for her celebrity parents. She became the Executive Vice President of Development & Acquisitions for her father's company, The Trump Organization.","['Donald Trump', 'Barron Trump']"
+9,Danny DeVito,"November 17, 1944",80,film_producer,"Long-time actor who won an Emmy Award and a Golden Globe Award for his role as Louie de Palma in the TV series Taxi. He has appeared in such films as One Flew Over the Cuckoo's Nest, LA Confidential, Batman Returns, Get Shorty, Matilda, and Mars Attacks!","['Charlie Day', 'Kaitlin Olson', 'Rhea Perlman']"
+10,Arnold Schwarzenegger,"July 30, 1947",77,actor,"Bodybuilder, actor, and politician who served as the governor of California from 2003 to 2011. His best known films include Conan the Barbarian, Predator, The Terminator series, and Total Recall. In 1996 he portrayed Howard Langston in the holiday film Jingle All the Way.","['Sylvester Stallone', 'Danny Devito', 'Maria Shriver']"
+11,Donald Trump,"June 14, 1946",78,entrepreneur,"The 45th and 47th president of the United States, he first made his mark as a successful businessman, becoming a prominent real estate developer.  He founded The Trump Organization and was the host of the popular reality TV series The Apprentice.  In 2024, he won the Republican nomination for president, then won the general election to become the 47th president.","['Barron Trump', 'Melania Knauss']"
+12,Britney Spears,"December 02, 1981",43,actor,"Pop superstar whose first two albums, Baby One More Time and Oops!...I Did it Again, both sold over 20 million copies worldwide. She released another six albums from 2001 to 2013 and starred in her feature film debut Crossroads in 2002.","['Miley Cyrus', 'Christina Aguilera']"
+13,Kamala Harris,"October 20, 1964",60,politician,"Politician who became the vice president of the United States alongside President Joe Biden in 2021. She became the first female vice president of the U.S. as well as the first Black vice president and the first Asian American vice president. Prior to her vice presidency, she served in the U.S. Senate for four years.","['Joe Biden', 'Barack Obama', 'Douglas Emhoff']"
+14,Elon Musk,"June 28, 1971",53,aerospace_engineer,"South African engineer and billionaire who founded PayPal, SpaceX, Tesla Motors and Neuralink.  In January 2021, he was the richest person in the world with a net worth of $188 billion.","['Jeff Bezos', 'Bill Gates', 'Larry Page']"
+15,Julia Roberts,"October 28, 1967",57,film_producer,"Gained fame after starring in Pretty Woman and went on to win an Oscar for her leading role in Erin Brockovich in 2000. Other notable films include Hook, Mona Lisa Smile, Mirror Mirror and August: Osage County. In 2018, she began starring in the Amazon series Homecoming.","['George Clooney', 'Richard Gere', 'Sandra Bullock']"
+16,Morgan Freeman,"June 01, 1937",87,actor,"Won an Academy Award for Best Supporting Actor for his role in the Clint Eastwood film Million Dollar Baby in 2005. He is also recognized for his roles in such films as The Shawshank Redemption, Glory, Unforgiven, Bruce Almighty, The Dark Knight, The Sum of All Fears and Dolphin Tale.","['Tim Robbins', 'Clint Eastwood', 'Brad Pitt']"
+17,Hillary Clinton,"October 26, 1947",77,lawyer,"Former First Lady, U.S. Senator, Secretary of State, and 2016 Democratic presidential nominee.","['Bill Clinton', 'Barack Obama', 'Nancy Pelosi']"
+18,Lady Gaga,"March 28, 1986",39,record_producer,"Born Stefani Joanne Angelina Germanotta, she became the first recording artist in history to have three singles sell over four million copies each online. Her best known songs include ""Judas,"" ""Bad Romance"" and Shallow. In 2018, she starred as Ally in the remake of A Star is Born alongside Bradley Cooper.","['Bradley Cooper', 'Beyoncé', 'Tony Bennett']"
+19,Justin Bieber,"March 01, 1994",31,musician,"Pop sensation who propelled to fame after his 2010 YouTube single ""Baby"" became an international hit. His first album, My World 2.0, debuted at number one on the U.S. Billboard 200 and went on to sell over five million copies worldwide. Subsequently, his next three studio albums debuted at number one on the U.S. Billboard 200, making him one of the world's best-selling music artists.","['Hailey Bieber', 'Selena Gomez', 'Shawn Mendes']"
+20,Johnny Depp,"June 09, 1963",61,actor,"Actor who starred as Captain Jack Sparrow in the Pirates of the Caribbean film franchise and also played leading roles in the films Edward Scissorhands, Ed Wood, Donnie Brasco, Blow, and What's Eating Gilbert Grape. He won a Golden Globe Award for Best Actor for his role in Sweeney Todd: The Demon Barber of Fleet Street.","['Orlando Bloom', 'Helena Bonham Carter', 'Amber Heard']"
+21,Sylvester Stallone,"July 06, 1946",78,screenwriter,"Director, actor and screenwriter best known for playing Italian-American boxer Rocky Balboa in the 1976 film Rocky. He reprised the role in six sequels, released from 1979 to 2015. He also portrayed John Rambo in the Rambo film franchise and played leading roles in the films Cliffhanger, The Expendables, Cop Land and Spy Kids 3-D: Game Over.","['Arnold Schwarzenegger', 'Dolph Lundgren', 'Carl Weathers']"
+22,Sandra Bullock,"July 26, 1964",60,film_producer,"Actress who won an Academy Award for her leading role in the 2009 film The Blind Side. She has also played starring roles in the films Speed, Gravity, The Proposal, Miss Congeniality, Crash and Bird Box.","['Keanu Reeves', 'Ryan Reynolds', 'Melissa McCarthy']"
+23,Kanye West,"June 08, 1977",47,record_producer,"One of the best-selling and most awarded artists of all time, he has received 24 Grammy Awards over the course of his music career. He was ranked the 3rd top producer of the decade in 2010 by Billboard. He's received praise for such albums as The College Dropout, Graduation, My Beautiful Dark Twisted Fantasy and Yeezus. He legally changed his name to Ye in 2021.","['Taylor Swift', 'Kim Kardashian', 'North West']"
+24,Samuel L. Jackson,"December 21, 1948",76,Actor,"Prolific actor known for roles in Pulp Fiction, Marvel films, and collaborations with Quentin Tarantino.","['Denzel Washington', 'Bruce Willis', 'Morgan Freeman']"
+25,Shaquille O'Neal,"March 06, 1972",53,basketball_player,"Retired NBA star, 4-time champion, and media personality known for his dominance and charisma.","['Kobe Bryant', 'Charles Barkley', 'LeBron James']"
+26,Queen Elizabeth II,"April 21, 1926",96,Monarch,"The longest-reigning British monarch, serving from 1952 until her death in 2022.","['Prince Philip', 'Princess Diana', 'King Charles']"
+27,Mariah Carey,"March 27, 1970",55,record_producer,"Pop artist who gained fame for hits like ""Vision of Love,"" ""Touch My Body"" and ""Shake It Off."" She became Colombia Records' top recording artist in the early 1990s and her 1995 single ""One Sweet Day"" with Boyz II Men set a record by spending 16 weeks at the top of the Billboard Hot 100 chart.","['Nick Cannon', 'Whitney Houston', 'Jennifer Lopez']"
+28,Robert Downey Jr.,"April 04, 1965",59,actor,Actor known for his comeback as Iron Man in the Marvel Cinematic Universe after overcoming personal struggles.,"['Chris Evans', 'Scarlett Johansson', 'Tom Holland']"
+29,Justin Timberlake,"January 31, 1981",44,actor,"Pop star and actor who first gained notoriety as a member of the boy band NSYNC. After the band broke up, he launched a solo career that has included the #1 singles ""SexyBack"" and ""My Love."" As an actor, he has played prominent roles in such films as The Social Network, Bad Teacher and Friends with Benefits.","['Britney Spears', 'Jessica Biel', 'NSYNC']"
+30,Chuck Norris,"March 10, 1940",85,actor,"Martial arts star of TV's Walker, Texas Ranger, who became an internet sensation in 2005 with memes based on exaggerated feats of combat.","['Arnold Schwarzenegger', 'Bruce Lee', 'Sylvester Stallone']"
+31,Jackie Chan,"April 07, 1954",70,actor,"Actor, choreographer, and stuntman whose notable films include the Rush Hour trilogy, Enter the Dragon, Shanghai Noon, and The Karate Kid. He grew popular through his mix of comedy and stunts, most of which he performed himself, and has also worked as a director and producer, martial artist, and Mandopop singer.","['Rowan Atkinson', 'Tom Hanks', 'John Travolta']"
+32,Joe Biden,"November 20, 1942",82,lawyer,Longtime politician who became the 46th president of the United States in 2021. He served as vice president of the United States for two terms under President Barack Obama. He was also the US Senator from Delaware for 36 years.,"['Barack Obama', 'Sarah Palin', 'Dick Cheney']"
+33,Jennifer Lopez,"July 24, 1969",55,singer,"Hip-hop and R&B superstar better known as J-Lo who has sold over 80 million records worldwide. She released her debut album, On the 6, in 1999 and followed it up with the certified quadruple platinum album J.Lo in 2001. Her best known songs include ""Waiting for Tonight,"" ""If You Had My Love,"" ""Love Don't Cost a Thing"" and ""Jenny from the Block.""","['Ben Affleck', 'Shakira', 'Marc Anthony']"
+34,Angelina Jolie,"June 04, 1975",49,actor,"Won an Academy Award for Best Supporting Actress for her role in the 1999 film Girl, Interrupted. She played lead roles in the films Maleficent, Salt, Changeling, Lara Croft: Tomb Raider, and Mr. & Mrs. Smith and directed the 2014 film Unbroken. In 2019, she was cast as superhero Thena in the Marvel film The Eternals.","['Johnny Depp', 'Brad Pitt', 'Ethan Hawke']"
+35,Dwayne Johnson,"May 02, 1972",52,wrestler,"Initially gained fame as the wrestler The Rock, competing in the WWF and WWE from 1996 to 2004. He then became a widely popular actor, starring in such films as Hercules, San Andreas and the Fast and the Furious franchise.","['John Cena', 'Randy Orton', 'Madison Pettis']"
+36,Tom Hanks,"July 09, 1956",68,film_producer,"Legendary actor who won back-to-back Academy Awards for Best Actor for his roles in Philadelphia in 1993 and Forrest Gump in 1994. He has starred in many other classics, including Cast Away, The Green Mile, Saving Private Ryan, and Apollo 13. In 2019, he was cast as Mr. Rogers in the biopic A Beautiful Day in the Neighborhood.","['Steven Spielberg', 'Chester Hanks', 'Colin Hanks']"
+37,Betty White,"January 17, 1922",103,comedian,"Beloved comedic actress from The Mary Tyler Moore Show and The Golden Girls who later hosted Betty White's Off Their Rockers and starred in Hot in Cleveland. She won six Emmy Awards and, in 2009, she received the Screen Actors Guild Life Achievement Award.","['Bea Arthur', 'Rue McClanahan', 'Cloris Leachman']"
+38,Nicolas Cage,"January 07, 1964",61,actor,"Longtime actor who won the Academy Award for Best Actor in 1995 for his role in Leaving Las Vegas. He has also starred in such films as Gone in 60 Seconds, The Rock, National Treasure, Adaptation and Kick-Ass.","['Matt Dillon', 'Lisa Presley', 'Patricia Arquette']"
+39,Miley Cyrus,"November 23, 1992",32,actor,"After becoming a child television star playing the title character on the hit Disney series Hannah Montana, she went on to become an international pop star with such hit songs as ""Party in the U.S.A."" and ""Wrecking Ball."" In 2017, she served as a coach on The Voice.","['Billy Ray Cyrus', 'Liam Hemsworth', 'Dolly Parton']"
+40,Brad Pitt,"December 18, 1963",61,actor,"Hollywood star who played lead roles in the films Moneyball, Fight Club, The Curious Case of Benjamin Button, World War Z, and Inglourious Basterds. He also played Rusty Ryan in the Ocean's Eleven trilogy. He won an Academy Award for Best Supporting Actor for his role as Cliff Booth in the 2019 film Once Upon a Time in Hollywood.","['Angelina Jolie', 'Jennifer Aniston', 'George Clooney']"
+41,Beyoncé,"September 04, 1981",43,singer,"Grammy-winning singer, performer, and entrepreneur known for her powerful vocals and influence in pop culture.","['Jay-Z', 'Kelly Rowland', 'Rihanna']"
+42,Mark Zuckerberg,"May 14, 1984",40,programmer,"Programmer and businessman who co-founded Facebook, a social networking website, at age 20 and took it public in 2012.","['Bill Gates', 'Jesse Eisenberg', 'Jack Dorsey']"
+43,John Travolta,"February 18, 1954",71,actor,"Actor who starred in the 1970s hit films Saturday Night Fever and Grease. He later went on to play Vincent Vega in the critically acclaimed 1994 film Pulp Fiction and he also starred in Get Shorty, Ladder 49, Wild Hogs, Hairspray, and Swordfish.","['Nicolas Cage', 'Kelly Preston', 'Robert Shapiro']"
+44,Bill Cosby,"July 12, 1937",87,actor,"Stand-up comedian who became known for starring on his own sitcom The Cosby Show, which aired from 1984 to 1992. He later created the comedy series Fat Albert and the Cosby Kids.","['Bryan Cranston', 'Bruce Willis', 'Billy Porter']"
+45,Oprah Winfrey,"January 29, 1954",71,media_proprietor,"Television host and producer who was named the most influential woman in the world by TIME magazine and hosted The Oprah Winfrey Show, the highest-rated syndicated program on air, from 1986 to 2011.","['Ellen Degeneres', 'Mehmet Oz', 'Gayle King']"
+46,Robert De Niro,"August 17, 1943",81,actor,Legendary actor who won an Academy Award for Best Actor for his role as Jake LaMotta in the 1980 boxing film Raging Bull and an Academy Award for Best Supporting Actor for his role as Vito Corleone in the 1974 classic The Godfather Part II.,"['Ben Stiller', 'Al Pacino', 'Ashley Judd']"
+47,Clint Eastwood,"May 31, 1930",94,actor,"First gained fame as an iconic actor in such classic Western films as A Fistful of Dollars and The Good, the Bad and the Ugly and as Detective Harry Callahan in the Dirty Harry franchise. He later became a renowned director, receiving the Academy Awards for Best Director and Best Picture for his films Unforgiven and Million Dollar Baby.","['Scott Eastwood', 'Frances Fisher', 'Francesca Eastwood']"
+48,Mark Wahlberg,"June 05, 1971",53,film_producer,"Actor who has played starring roles in such films as Boogie Nights, The Fighter, Ted, Transformers: Age of Extinction, Daddy's Home and Lone Survivor. He also served as executive producer of the hit HBO series Entourage and Boardwalk Empire.","['Will Ferrell', 'Donnie Wahlberg', 'Ella Wahlberg']"
+49,Celine Dion,"March 30, 1968",57,singer,"Pop and dance artist known for singing the theme from Titanic, ""My Heart Will Go On."" She won the Chopard Diamond Award for selling over 200 million albums.","['Jennifer Lopez', 'Mariah Carey', 'Janet Jackson']"
