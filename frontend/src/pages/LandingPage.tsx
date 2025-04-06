@@ -2,13 +2,14 @@ import React from 'react';
 import { Container, Box, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import SearchInput from '../components/SearchInput';
+import { Celebrity } from '../types/Celebrity';
 
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
 
-  const handleSearch = (query: string) => {
-    // For now, any search will navigate to the analysis page
-    navigate('/analysis');
+  const handleSearch = (celebrity: Celebrity) => {
+    // Navigate to the analysis page with the celebrity ID
+    navigate(`/analysis/${celebrity.id}`);
   };
 
   return (

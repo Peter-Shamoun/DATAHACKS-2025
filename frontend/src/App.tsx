@@ -27,6 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/analysis" element={<AnalysisPage />} />
+          <Route path="/analysis/:id" element={<AnalysisPage />} />
         </Routes>
       </Router>
     </ThemeProvider>

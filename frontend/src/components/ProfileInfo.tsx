@@ -1,5 +1,6 @@
-import React from 'react';
-import { Box, Typography, Avatar, Tooltip } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import { Box, Typography, Avatar, Tooltip, CircularProgress } from '@mui/material';
+import { SentimentGrade, calculatePublicSentimentGrade } from '../utils/sentimentService';
 
 interface ProfileInfoProps {
   name: string;
@@ -29,6 +30,7 @@ const getGradeColor = (grade: string) => {
   }
 };
 
+// Fallback explanation for backward compatibility
 const getGradeExplanation = (grade: string): string => {
   const baseGrade = grade.charAt(0).toUpperCase();
   switch (baseGrade) {
@@ -56,8 +58,39 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({
   publicsentiment = 'N/A',
   bio = 'No biography available.',
 }) => {
-  const gradeColor = getGradeColor(publicsentiment);
-  const gradeExplanation = getGradeExplanation(publicsentiment);
+  const [sentimentGrade, setSentimentGrade] = useState<SentimentGrade | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  // Fetch sentiment grade when component mounts
+  useEffect(() => {
+    const loadSentimentGrade = async () => {
+      if (!name) return;
+      
+      setLoading(true);
+      try {
+        const grade = await calculatePublicSentimentGrade(name);
+        setSentimentGrade(grade);
+      } catch (error) {
+        console.error('Error calculating sentiment grade:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    loadSentimentGrade();
+  }, [name]);
+  
+  // Use loaded grade or fallback to provided publicsentiment
+  const displayGrade = sentimentGrade ? sentimentGrade.letter : publicsentiment;
+  const gradeColor = getGradeColor(displayGrade);
+  
+  // Use detailed calculated explanation or fallback to basic explanation
+  const gradeExplanation = sentimentGrade 
+    ? sentimentGrade.description
+    : getGradeExplanation(displayGrade);
+  
+  // Format occupation by replacing underscores with spaces
+  const formattedOccupation = occupation.replace(/_/g, ' ');
 
   return (
     <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 4, mb: 4 }}>
@@ -81,7 +114,7 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({
           Age: <Box component="span" sx={{ color: '#d89c62' }}>{age}</Box>
         </Typography>
         <Typography variant="body1" sx={{ fontFamily: 'Poppins', color: '#6b4730' }}>
-          Occupation: <Box component="span" sx={{ color: '#d89c62' }}>{occupation}</Box>
+          Occupation: <Box component="span" sx={{ color: '#d89c62' }}>{formattedOccupation}</Box>
         </Typography>
       </Box>
       <Box sx={{ 
@@ -108,30 +141,42 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({
         alignItems: 'center',
         gap: 1
       }}>
-        <Tooltip 
-          title={
-            <Typography sx={{ fontFamily: 'Poppins', fontSize: '0.875rem', p: 1 }}>
-              {gradeExplanation}
-            </Typography>
-          }
-          arrow
-          placement="left"
-        >
-          <Avatar 
-            sx={{ 
-              width: 100,
-              height: 100,
-              bgcolor: gradeColor,
-              border: `4px solid ${gradeColor}`,
-              fontSize: '2.5rem',
-              fontFamily: 'Poppins',
-              fontWeight: 600,
-              cursor: 'help'
-            }}
+        {loading ? (
+          <Box sx={{ 
+            width: 100, 
+            height: 100, 
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center'
+          }}>
+            <CircularProgress sx={{ color: '#3d2a1d' }} />
+          </Box>
+        ) : (
+          <Tooltip 
+            title={
+              <Typography sx={{ fontFamily: 'Poppins', fontSize: '0.875rem', p: 1 }}>
+                {gradeExplanation}
+              </Typography>
+            }
+            arrow
+            placement="left"
           >
-            {publicsentiment}
-          </Avatar>
-        </Tooltip>
+            <Avatar 
+              sx={{ 
+                width: 100,
+                height: 100,
+                bgcolor: gradeColor,
+                border: `4px solid ${gradeColor}`,
+                fontSize: '2.5rem',
+                fontFamily: 'Poppins',
+                fontWeight: 600,
+                cursor: 'help'
+              }}
+            >
+              {displayGrade}
+            </Avatar>
+          </Tooltip>
+        )}
         <Typography 
           variant="subtitle1" 
           sx={{ 
@@ -141,6 +186,11 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({
           }}
         >
           Public Sentiment
+          {sentimentGrade && (
+            <Typography component="span" variant="caption" sx={{ display: 'block', fontSize: '0.7rem', color: '#d89c62' }}>
+              Score: {sentimentGrade.score}/100
+            </Typography>
+          )}
         </Typography>
       </Box>
     </Box>
